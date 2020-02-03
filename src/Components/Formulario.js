@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Error from './Error'; 
 import {Boton} from '../styleComponent/sc_formulario';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 //Hooks
 import useMoneda from '../hooks/useMoneda';
@@ -69,6 +70,11 @@ const Formulario = ({guardarMoneda, guardarCriptomoneda}) => {
             />
         </form>
     )
+}
+
+Formulario.propTypes = {
+    guardarMoneda : PropTypes.func.isRequired,
+    guardarCriptomoneda: PropTypes.func.isRequired
 }
 
 export default Formulario;
